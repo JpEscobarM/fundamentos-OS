@@ -1,4 +1,4 @@
-#Análise de chamadas de sistema
+# Análise de chamadas de sistema
 
 Analise os códigos ola_mundo.c e ola_mundo.py a seguir.
  Avalie qual dos códigos fará mais chamadas de sistema. 
@@ -7,7 +7,7 @@ Analise os códigos ola_mundo.c e ola_mundo.py a seguir.
  avalie qual dos programas de fato executa mais chamadas de sistema.
  Explique o(s) motivo(s) que levaram a tal resultado.
  
-##Analsie ola_mundo.c
+## Analsie ola_mundo.c
 
 A execução de um codigo é realizada pelas seguintes etapas:
 
