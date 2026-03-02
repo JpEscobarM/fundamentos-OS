@@ -12,10 +12,10 @@ A execução de um codigo é realizada pelas seguintes etapas:
 
 ### 1 - Inicialização do processo.
 ### 2 - Carregamento das bibliotecas.
-### 3️ - Preparação do ambiente de execução.
-### 4️ - Execução do programa (main).
-### 5️ - Saída no terminal.
-### 6️ - Finalização / interação terminal.
+### 3 - Preparação do ambiente de execução.
+### 4 - Execução do programa (main).
+### 5 - Saída no terminal.
+### 6 - Finalização / interação terminal.
 
 ## strace ./ola_mundo:
 
