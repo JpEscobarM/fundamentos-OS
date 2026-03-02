@@ -6,16 +6,10 @@ Analise os códigos ola_mundo.c e ola_mundo.py a seguir.
  Após isso, através do comando strace, avalie as chamadas de sistema identificadas e avalie qual dos programas de fato executa mais chamadas de sistema.
  Explique o(s) motivo(s) que levaram a tal resultado.
  
-## Analsie ola_mundo.c
+## Analsie antes da execução: 
 
-A execução de um codigo é realizada pelas seguintes etapas:
+ Em tese o programa em python deve executar mais chamadas de sistema do que um programa em C, mesmo os dois programas sendo extremamente simples, a resposta pra isso é porque o em C o código vira um executável nativo em binário que chama a libc e executa o main() praticamente de forma direta. Em python o script não é executado diretamente, o que executamos é um interpretador python que inicializa o runtime, configura o ambiente, carrega módulos e após isso abre e lê o arquivo .py do código, essas operações acabam por requisitar muito do kernel e assim geram mais syscalls.
 
-### 1 - Inicialização do processo.
-### 2 - Carregamento das bibliotecas.
-### 3 - Preparação do ambiente de execução.
-### 4 - Execução do programa (main).
-### 5 - Saída no terminal.
-### 6 - Finalização / interação terminal.
 
 ## strace ./ola_mundo:
 
@@ -84,7 +78,6 @@ write(1, "Ola turma!\n", 11Ola turma! )            = 11
 fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
 strace: Process 1547 detached
 ```
- As syscalls representam apenas as interações entre o programa e o kernel, como acesso a arquivos, gerenciamento de memória e saída no terminal.
 
 
 ## strace python3 ola_mundo.py: 
@@ -440,3 +433,5 @@ munmap(0x73becad2e000, 16384)           = 0
 exit_group(0)                           = ?
 
 ```
+
+O resultado observado com strace nos mostra que o binário em C tem um conjunto menor de syscalls pois, carrega a libc, escreve no stdout e encerra o programa, já no strace do arquivo em python, temos o mesmo bloco inicial, porém aparecem muitas syscalls adicionais por conta do interpretador e de como o ecossistema do python funciona, mesmo sendo simples ele ainda tem mais dependencias do que um arquivo em C.
