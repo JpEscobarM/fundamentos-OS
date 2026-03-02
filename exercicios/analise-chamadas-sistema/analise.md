@@ -6,7 +6,7 @@ Analise os códigos ola_mundo.c e ola_mundo.py a seguir.
  Após isso, através do comando strace, avalie as chamadas de sistema identificadas e avalie qual dos programas de fato executa mais chamadas de sistema.
  Explique o(s) motivo(s) que levaram a tal resultado.
  
-## Analsie antes da execução: 
+## Análise antes da execução: 
 
  Em tese o programa em python deve executar mais chamadas de sistema do que um programa em C, mesmo os dois programas sendo extremamente simples, a resposta pra isso é porque o em C o código vira um executável nativo em binário que chama a libc e executa o main() praticamente de forma direta. Em python o script não é executado diretamente, o que executamos é um interpretador python que inicializa o runtime, configura o ambiente, carrega módulos e após isso abre e lê o arquivo .py do código, essas operações acabam por requisitar muito do kernel e assim geram mais syscalls.
 
