@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1773931573 source:c:\users\jmartins\repos\fundamentos-os\threads\exercicio_4\main.c
+	<stdio.h>
+	<stdlib.h>
+	"thread.h"
+
+1773930864 source:c:\users\jmartins\repos\fundamentos-os\threads\exercicio_4\thread.c
+	<stdio.h>
+	<stdlib.h>
+	"thread.h"
+
+1773928343 c:\users\jmartins\repos\fundamentos-os\threads\exercicio_4\thread.h
+	<pthread.h>
+	"globals.h"
+	<time.h>
+
+1773928436 source:c:\users\jmartins\repos\fundamentos-os\threads\exercicio_4\globals.c
+	"globals.h"
+
+1773928427 c:\users\jmartins\repos\fundamentos-os\threads\exercicio_4\globals.h
+
