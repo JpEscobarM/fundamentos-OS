@@ -48,6 +48,8 @@ int main()
 
     srand(time(NULL));
 
+    unsigned int seed = 1243;
+
     pthread_t threads_v[NUM_THREADS];
     ThreadArgs tArgs[NUM_THREADS];
 
@@ -55,7 +57,8 @@ int main()
     for(int i =0 ; i< NUM_THREADS ; i ++){
         tArgs[i].thread_id =i;
         tArgs[i].sec=i;
-        tArgs[i].num = rand();
+        tArgs[i].num = rand()%10;
+
     }
 
     for(int i =0 ; i< NUM_THREADS ; i ++){
