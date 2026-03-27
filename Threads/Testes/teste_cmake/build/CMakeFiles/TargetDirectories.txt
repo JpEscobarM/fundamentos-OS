@@ -1,0 +1,3 @@
+/mnt/c/users/jmartins/repos/fundamentos-OS/Threads/teste_cmake/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/users/jmartins/repos/fundamentos-OS/Threads/teste_cmake/build/CMakeFiles/edit_cache.dir
+/mnt/c/users/jmartins/repos/fundamentos-OS/Threads/teste_cmake/build/CMakeFiles/teste_cmake.dir

@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/teste_cmake.dir/main.c.o  -o teste_cmake  -lpthread 
