@@ -13,7 +13,9 @@ void* descontar()
 
     for (int i =0; i < 100; i++)
     {
-        pthread_mutex_lock(&lock);
+        while (pthread_mutex_trylock(&lock) != 0) {
+            printf("<descontar> saldo está ocupado\n");
+        }
         printf("Saldo passou de %0.2lf para ",saldo);
         saldo -= 10;
         printf("%0.2f\n",saldo);
@@ -29,7 +31,9 @@ void* depositar()
 
     for (int i =0; i < 100; i++)
     {
-        pthread_mutex_lock(&lock);
+        while (pthread_mutex_trylock(&lock) != 0) {
+            printf("<descontar> saldo está ocupado\n");
+        }
         printf("Saldo passou de %0.2lf para ",saldo);
         saldo += 10;
         printf("%0.2f\n",saldo);
