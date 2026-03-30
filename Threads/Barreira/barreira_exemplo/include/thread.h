@@ -63,4 +63,13 @@ void exibe_parametros_threads(Param_t **param);
  */
 void inicializa_barreira();
 
+/**
+ *
+ * @param param vetor de parametro das threads para serem inicializados
+ */
+void inicializa_pthreads(Param_t **param);
+
+
+void *calcula_vetor_dados(void *args);
+
 #endif

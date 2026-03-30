@@ -8,10 +8,9 @@ int main(void)
 
     inicializa_parametros_threads(&param_t);
 
-   exibe_parametros_threads(&param_t);
-
     inicializa_barreira();
 
+    inicializa_pthreads(&param_t);
 
 
     free(param_t);

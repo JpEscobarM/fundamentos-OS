@@ -50,3 +50,21 @@ void inicializa_barreira()
 {
     pthread_barrier_init(&barreira,NULL,QTD_THREADS_PROCESSAMENTO);
 }
+
+void* calcula_vetor_dados(void *args)
+{
+    Param_t **param = (Param_t **) args;
+
+    exibe_parametros_threads(param);
+
+    pthread_exit(NULL);
+}
+
+
+void inicializa_pthreads( Param_t **param)
+{
+    for (int i = 0 ; i < QTD_THREADS_PROCESSAMENTO; i++ )
+    {
+        pthread_create(&calculadoras_t[i],NULL,calcula_vetor_dados,(void *)param);
+    }
+}
