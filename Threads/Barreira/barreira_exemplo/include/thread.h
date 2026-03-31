@@ -17,21 +17,21 @@
 /**
  * quantidade de elementos no vetor de dados
  */
-#define QTD_ELEMENTOS 100000
+#define QTD_ELEMENTOS 900000
 /**
  * vetor de dados
  */
-static double *vetorDados;
+double *vetorDados;
 
 /**
  * threads de processamento do vetor de dados
  */
-static pthread_t calculadoras_t[QTD_THREADS_PROCESSAMENTO];
+ pthread_t calculadoras_t[QTD_THREADS_PROCESSAMENTO];
 
 /**
  * barreira para as threads
  */
-static pthread_barrier_t barreira;
+ pthread_barrier_t barreira;
 
 
 typedef struct
@@ -71,5 +71,7 @@ void inicializa_pthreads(Param_t **param);
 
 
 void *calcula_vetor_dados(void *args);
+
+void inicializa_vetor_dados();
 
 #endif
