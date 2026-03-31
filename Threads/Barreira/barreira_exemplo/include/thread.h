@@ -17,7 +17,7 @@
 /**
  * quantidade de elementos no vetor de dados
  */
-#define QTD_ELEMENTOS 900000
+#define QTD_ELEMENTOS 100000
 /**
  * vetor de dados
  */
