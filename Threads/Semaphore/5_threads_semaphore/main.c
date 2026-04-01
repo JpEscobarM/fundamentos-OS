@@ -23,6 +23,10 @@ b) 2, 4 e 8 threads executando 10000 incrementos cada
 c) 2, 4 e 8 threads executando 100000 incrementos cada
 
 d) 2, 4 e 8 threads executando 1000000 incrementos cada
+
+
+REALIZADO: 2. Converta o exercício 3 da semana anterior para uso de semáforo ao invés de mutex
+
  */
 
 

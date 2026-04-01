@@ -11,15 +11,19 @@ int main(void)
 
  cJSON *root = cJSON_Parse(bufferLeitura);
 
- if (root == NULL) {
-  const char *erro = cJSON_GetErrorPtr();
-  printf("ERRO DE PARSE: %s\n", erro ? erro : "desconhecido");
-  free(bufferLeitura);
-  return 1;
+ int n = cJSON_GetArraySize(root);
+
+ for(int i = 0; i < n; i++)
+ {
+  cJSON *item = cJSON_GetArrayItem(root, i);
+
+  cJSON *payload = cJSON_GetObjectItem(item, "brute_data");
+
+  printf("%s\n", payload->valuestring);
  }
 
- printf("Parse OK\n");
  printf("Quantidade de registros: %d\n", cJSON_GetArraySize(root));
+
 
  cJSON_Delete(root);
  free(bufferLeitura);
