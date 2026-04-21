@@ -1,0 +1,11 @@
+Crie um programa que simula uma linha de produção com 3 estágios.
+
+No primeiro estagio 5 threads fundem preças brutas de aluminio,
+no segundo estágio 5 threads pegam peças brutas de aluminio
+e fazem o polimento, e no terceiro estagio, 5 threads pegam
+essas peças  polidas e fazem a pintura.
+
+mantenha 3 contadores:
+1- numero de peças brutas fundidas aguardando polimento.
+2- numero de peças polidas esperando pintura.
+3- numero de peças pintadas.
